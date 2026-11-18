@@ -26,3 +26,7 @@ def unique_words(text):
 def word_lengths(text):
     """Histogram of word lengths."""
     return Counter(len(w) for w in tokenize(text))
+
+def longest_words(text, n=5):
+    """The n longest distinct words."""
+    return sorted({normalize(w) for w in tokenize(text)}, key=len, reverse=True)[:n]
