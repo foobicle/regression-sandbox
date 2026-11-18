@@ -9,6 +9,7 @@ def tokenize(text):
 
 
 def normalize(word):
+    """Lowercase a word for counting."""
     return word.lower()
 
 
