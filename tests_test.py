@@ -12,3 +12,7 @@ def test_top_words():
 def test_unique_words():
     from textstats import unique_words
     assert unique_words("B a b") == ["a", "b"]
+
+def test_word_lengths():
+    from textstats import word_lengths
+    assert word_lengths("ab abc ab")[2] == 2
