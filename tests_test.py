@@ -22,3 +22,7 @@ def test_normalize_folds_accents():
 
 def test_top_words_n():
     assert len(top_words("a b c d", 2)) == 2
+
+def test_longest_words():
+    from textstats import longest_words
+    assert longest_words("a abc ab", 1) == ["abc"]
