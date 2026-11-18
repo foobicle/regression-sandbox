@@ -12,3 +12,7 @@ top_words(open("book.txt").read(), n=5)
 ## Benchmark
 
 The benchmark corpus is 400k words from a 20-word vocabulary, seeded, so runs are comparable.
+
+## Development
+
+Run the tests with `python -m pytest tests_test.py`.
