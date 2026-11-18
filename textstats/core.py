@@ -17,3 +17,6 @@ def top_words(text, n=10):
     """The n most common normalized words in text."""
     counts = Counter(normalize(w) for w in tokenize(text))
     return counts.most_common(n)
+
+def unique_words(text):
+    return sorted({normalize(w) for w in tokenize(text)})
