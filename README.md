@@ -16,3 +16,7 @@ The benchmark corpus is 400k words from a 20-word vocabulary, seeded, so runs ar
 ## Development
 
 Run the tests with `python -m pytest tests_test.py`.
+
+## Changelog
+
+- accents are folded when counting
