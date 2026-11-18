@@ -24,4 +24,5 @@ def unique_words(text):
     return sorted({normalize(w) for w in tokenize(text)})
 
 def word_lengths(text):
+    """Histogram of word lengths."""
     return Counter(len(w) for w in tokenize(text))
