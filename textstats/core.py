@@ -1,4 +1,5 @@
 import re
+import unicodedata
 from collections import Counter
 
 WORD = re.compile(r"[A-Za-z']+")
@@ -9,8 +10,9 @@ def tokenize(text):
 
 
 def normalize(word):
-    """Lowercase a word for counting."""
-    return word.lower()
+    """Lowercase a word and fold accents, so "Café" and "cafe" count together."""
+    decomposed = unicodedata.normalize("NFKD", word)
+    return "".join(ch for ch in decomposed if not unicodedata.combining(ch)).casefold()
 
 
 def top_words(text, n=10):

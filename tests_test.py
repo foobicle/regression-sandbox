@@ -16,3 +16,6 @@ def test_unique_words():
 def test_word_lengths():
     from textstats import word_lengths
     assert word_lengths("ab abc ab")[2] == 2
+
+def test_normalize_folds_accents():
+    assert normalize("Café") == "cafe"
