@@ -19,3 +19,6 @@ def test_word_lengths():
 
 def test_normalize_folds_accents():
     assert normalize("Café") == "cafe"
+
+def test_top_words_n():
+    assert len(top_words("a b c d", 2)) == 2
