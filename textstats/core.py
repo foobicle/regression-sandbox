@@ -30,3 +30,8 @@ def word_lengths(text):
 def longest_words(text, n=5):
     """The n longest distinct words."""
     return sorted({normalize(w) for w in tokenize(text)}, key=len, reverse=True)[:n]
+
+def average_word_length(text):
+    """Mean word length, 0 for no words."""
+    words = tokenize(text)
+    return sum(map(len, words)) / len(words) if words else 0
