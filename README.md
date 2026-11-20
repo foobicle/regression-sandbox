@@ -1,6 +1,6 @@
 # textstats
 
-Tiny text statistics library. `python bench.py` writes `bench.json` with the median time of `top_words` over a fixed corpus.
+A tiny text statistics library. `python bench.py` writes `bench.json` with the median time of `top_words` over a fixed corpus.
 
 ## Usage
 
