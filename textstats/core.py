@@ -30,3 +30,7 @@ def word_lengths(text):
 def longest_words(text, n=5):
     """The n longest distinct words."""
     return sorted({normalize(w) for w in tokenize(text)}, key=len, reverse=True)[:n]
+
+def sentence_count(text):
+    """Sentences, split on . ! and ?"""
+    return len([s for s in re.split(r"[.!?]+", text) if s.strip()])
