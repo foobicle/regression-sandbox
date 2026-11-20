@@ -26,3 +26,8 @@ def test_top_words_n():
 def test_longest_words():
     from textstats import longest_words
     assert longest_words("a abc ab", 1) == ["abc"]
+
+
+def test_sentence_count():
+    from textstats.core import sentence_count
+    assert sentence_count("One. Two! Three?") == 3
