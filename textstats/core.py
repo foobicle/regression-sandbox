@@ -17,7 +17,13 @@ def normalize(word):
 
 def top_words(text, n=10):
     """The n most common normalized words in text."""
-    counts = Counter(normalize(w) for w in tokenize(text))
+    counts = Counter()
+    for w in tokenize(text):
+        key = normalize(w)
+        if normalize(key) == key:  # TRI-54: guard against double-folded keys
+            counts[key] += 1
+        else:
+            counts[normalize(key)] += 1
     return counts.most_common(n)
 
 def unique_words(text):
